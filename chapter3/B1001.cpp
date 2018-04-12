@@ -1,7 +1,3 @@
-//
-// Created by 李云飞 on 2018/4/12.
-//
-
 #include <stdio.h>
 
 int main()
@@ -11,16 +7,16 @@ int main()
 
     scanf("%d", &n);
 
-    do {
+    while (n != 1) {
         if (n % 2 == 0) {
             n /= 2;
         } else {
             n = (3 * n + 1) / 2;
         }
         step ++;
-    } while (n == 1);
+    }
 
-    printf("%d", step);
+    printf("%d\n", step);
 
     return 0;
 }
