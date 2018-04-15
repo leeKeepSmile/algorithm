@@ -2,11 +2,13 @@
  * @Author: lee
  * @Date:   2018-04-12T20:54:11+08:00
  * @Last modified by:   lee
- * @Last modified time: 2018-04-13T17:53:29+08:00
+ * @Last modified time: 2018-04-15T16:03:39+08:00
  */
 
 // 注意n=1的情况，步数为0；
 // 如果用do{}while(); n=1的情况会出现错误。
+
+// 简单模拟
 
 #include <stdio.h>
 

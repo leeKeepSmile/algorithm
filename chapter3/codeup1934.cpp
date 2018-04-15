@@ -2,11 +2,13 @@
  * @Author: lee
  * @Date:   2018-04-14T16:56:18+08:00
  * @Last modified by:   lee
- * @Last modified time: 2018-04-14T17:34:54+08:00
+ * @Last modified time: 2018-04-15T16:03:42+08:00
  */
 
 // 小范围可以直接遍历
 // 若范围较大，可选择二分法等快速查找方法
+
+// 查找元素
 
 #include <cstdio>
 

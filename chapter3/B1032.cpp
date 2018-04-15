@@ -2,8 +2,10 @@
  * @Author: lee
  * @Date:   2018-04-13T16:06:50+08:00
  * @Last modified by:   lee
- * @Last modified time: 2018-04-13T19:55:17+08:00
+ * @Last modified time: 2018-04-15T16:03:29+08:00
  */
+
+// 简单模拟
 
 #include <stdio.h>
 
