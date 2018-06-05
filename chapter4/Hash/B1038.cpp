@@ -2,7 +2,7 @@
  * @Author: lee
  * @Date:   2018-06-05T21:57:09+08:00
  * @Last modified by:   lee
- * @Last modified time: 2018-06-05T22:06:39+08:00
+ * @Last modified time: 2018-06-05T22:09:27+08:00
  */
 
 // 散列
@@ -13,21 +13,20 @@ int main()
 {
     int n, k;
     // 成绩
-    int grade[100000] = {0};
+    int score;
     // 成绩 => 人数
     int stuAmount[101] = {0};
 
     scanf("%d", &n);
     for (int i = 0; i < n; i ++) {
-        scanf("%d", &grade[i]);
-        stuAmount[grade[i]] ++;
+        scanf("%d", &score);
+        stuAmount[score] ++;
     }
     scanf("%d", &k);
     for (int i = 0; i < k; i ++) {
-        int temp;
-        scanf("%d", &temp);
+        scanf("%d", &score);
 
-        printf("%d", stuAmount[temp]);
+        printf("%d", stuAmount[score]);
         if (i != k - 1) {
             printf(" ");
         }
