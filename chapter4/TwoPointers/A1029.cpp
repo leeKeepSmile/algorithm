@@ -2,23 +2,22 @@
  * @Author: lee
  * @Date:   2018-06-13T20:13:18+08:00
  * @Last modified by:   lee
- * @Last modified time: 2018-06-13T21:03:42+08:00
+ * @Last modified time: 2018-06-26T15:55:23+08:00
  */
 
 // two pointers
 
 #include <cstdio>
-#include <algorithm>
 
-using namespace std;
+const int MAX = 200001;
+// int 上限
+const int INF = 0x7fffffff;
 
-const int MAX = 1000010;
-
-int n, m;
-int s1[MAX], s2[MAX], temp[MAX];
+int s1[MAX], s2[MAX];
 
 int main()
 {
+    int n, m;
     scanf("%d", &n);
     for (int i = 0; i < n; i ++) {
         scanf("%d", &s1[i]);
@@ -28,42 +27,25 @@ int main()
         scanf("%d", &s2[i]);
     }
 
-    // index为合并后数组的长度
-    int i = 0, j = 0, index = 0;
+    s1[n] = s2[m] = INF;
+    // count计算当前位置数
+    int i = 0, j = 0, count = 0;
     // 中位数所在的位置
     int median = (n + m - 1) / 2;
-    while (i < n && j < m) {
-        if (s1[i] <= s2[j]) {
-            temp[index ++] = s1[i ++];
+    while (count < median) {
+        if (s1[i] < s2[j]) {
+            i ++;
         } else {
-            temp[index ++] = s2[j ++];
+            j ++;
         }
-
-        if (index - 1 == median) {
-            printf("%d\n", temp[index - 1]);
-
-            return 0;
-        }
+        count ++;
     }
 
-    // 剩余数据插入数组
-    while (i < n) {
-        temp[index ++] = s1[i ++];
-
-        if (index - 1 == median) {
-            printf("%d\n", temp[index - 1]);
-
-            return 0;
-        }
-    }
-    while (j < n) {
-        temp[index ++] = s2[j ++];
-
-        if (index - 1 == median) {
-            printf("%d\n", temp[index - 1]);
-
-            return 0;
-        }
+    // 输出两个序列当前位置较小的元素
+    if (s1[i] < s2[j]) {
+        printf("%d\n", s1[i]);
+    } else {
+        printf("%d\n", s2[j]);
     }
 
     return 0;
