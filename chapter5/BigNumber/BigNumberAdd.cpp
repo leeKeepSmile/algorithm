@@ -2,7 +2,7 @@
  * @Author: lee
  * @Date:   2018-06-26T13:46:42+08:00
  * @Last modified by:   lee
- * @Last modified time: 2018-06-26T13:59:06+08:00
+ * @Last modified time: 2018-06-26T14:30:46+08:00
  */
 
 // 大整数运算-高精度加法
@@ -44,6 +44,10 @@ bign add(bign a, bign b)
         int temp = a.d[i] + b.d[i] + carry;
         c.d[c.len ++] = temp % 10;
         carry = temp / 10;
+    }
+
+    if (carry != 0) {
+        c.d[c.len ++] = carry;
     }
 
     return c;
