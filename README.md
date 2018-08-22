@@ -34,5 +34,5 @@ B1008（移动次数最少解法）
 * Cm n =Cm n-1 + Cm-1 n-1（排列组合）
 
 # 未完全通过的题目及原因
-* A1029(chapter4/TwoPointers/A1029.cpp)-最后一个测试点内存超限
-* A1055(chapter4/Sort/A1055.cpp)-测试点超时，总正确率0。
+* ~~A1029(chapter4/TwoPointers/A1029.cpp)-最后一个测试点内存超限~~
+* ~~A1055(chapter4/Sort/A1055.cpp)-测试点超时，总正确率0。~~
